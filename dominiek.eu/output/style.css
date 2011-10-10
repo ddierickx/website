@@ -23,12 +23,21 @@ a:hover {
   color: #f90;
 }
 
+#header {
+	background-image: url("/img/layout/header.jpg");
+	position: absolute;
+	top: 10px;
+	left: 80px;
+	height: 110px;
+	width: 700px;
+}
+
 #main {
   position: absolute;
 
-  top: 40px;
+  top: 120px;
   left: 280px;
-
+  padding: 20px;
   width: 500px;
 }
 
@@ -66,7 +75,7 @@ a:hover {
 #sidebar {
   position: absolute;
 
-  top: 40px;
+  top: 120px;
   left: 20px;
   width: 200px;
 
