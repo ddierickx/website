@@ -9,4 +9,4 @@ this is the *about* page, its about **stuff**
 * Venus
 * Neptune
 
-![Alternate text](http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Hilbert_curve_3.svg/512px-Hilbert_curve_3.svg.png)
+![QR Code](/img/qr.png)

@@ -1,8 +1,12 @@
 *
 {
+	font-family: Georgia;
+}
+
+html
+{
 	background-image: url('/img/bg.png');
 	background-repeat: repeat;
-	font-family: Georgia;
 }
 
 #sidebar
