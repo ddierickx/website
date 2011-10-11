@@ -95,7 +95,17 @@ html
 	border-bottom: 3px solid #FF1921;
 }
 
+#sidebar ul li a.current1
+{
+	border-bottom: 3px solid #FF1921;
+}
+
 #sidebar ul li a.link2:hover
+{
+	border-bottom: 3px solid #19BAFF;
+}
+
+#sidebar ul li a.current2
 {
 	border-bottom: 3px solid #19BAFF;
 }
@@ -105,10 +115,21 @@ html
 	border-bottom: 3px solid #FF5E19;
 }
 
+#sidebar ul li a.current3
+{
+	border-bottom: 3px solid #FF5E19;
+}
+
 #sidebar ul li a.link4:hover
 {
 	border-bottom: 3px solid #47FF19;
 }
+
+#sidebar ul li a.current4
+{
+	border-bottom: 3px solid #47FF19;
+}
+
 
 #content
 {
