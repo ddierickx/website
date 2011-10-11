@@ -1,0 +1,16 @@
+---
+layout: default
+title: Dominique Dierickx
+---
+
+<p>
+Some random introduction text will be inserted here, with some basic idea on what is on this site and why its here.
+</p>
+<p>
+Here are some recent articles I wrote:
+</p>
+<ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
