@@ -1,6 +1,6 @@
-*
+body
 {
-	font-family: Georgia;
+	background: none;
 }
 
 html
@@ -128,12 +128,4 @@ html
 #sidebar ul li a.current4
 {
 	border-bottom: 3px solid #47FF19;
-}
-
-
-#content
-{
-	position: absolute;
-	left: 320px;
-	top: 100px;
 }

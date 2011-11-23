@@ -1,60 +1,105 @@
-<html>
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
 	<title>Software</title>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script type="text/javascript" src="/scripts/playthings.js"></script>
-	<link href="/css/default.css" rel="stylesheet" type="text/css">
+  
+	<!-- Included CSS Files -->
+	<!-- Combine and Compress These CSS Files -->
+	<link rel="stylesheet" href="foundation/stylesheets/globals.css">
+	<link rel="stylesheet" href="foundation/stylesheets/typography.css">
+	<link rel="stylesheet" href="foundation/stylesheets/grid.css">
+	<link rel="stylesheet" href="foundation/stylesheets/ui.css">
+	<link rel="stylesheet" href="foundation/stylesheets/forms.css">
+	<link rel="stylesheet" href="foundation/stylesheets/orbit.css">
+	<link rel="stylesheet" href="foundation/stylesheets/reveal.css">
+	<link rel="stylesheet" href="foundation/stylesheets/mobile.css">
+	<!-- End Combine and Compress These CSS Files -->
+	<link rel="stylesheet" href="foundation/stylesheets/app.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-	<div id="container">
-		<div id="sidebar">
-			<ul>
-                
-                	
-                    
-                    
-                
-                    <li>
-                      <a class="link1" href="/index.html">Home</a>
-                    </li>
-                
-                	
-                    
-                    
-                
-                    <li>
-                      <a class="link2" href="/about.html">About</a>
-                    </li>
-                
-                	
-                    
-                    
-                
-                    <li>
-                      <a class="link3" href="/articles.html">Articles</a>
-                    </li>
-                
-                	
-                    
-                    
-                    	
-                    
-                
-                    <li>
-                      <a class="current4" href="/software.html">Software</a>
-                    </li>
-                
-			</ul>
-			<div class="title">
-				<div class="l1" name="title1">D o m i n i q u e</div>
-				<div class="l2" name="title2">D i e r i c k x</div>
-				<div class="l4" name="title3">P e r s o n a l</div>
-				<div class="l3" name="title4">W e b s i t e</div>
+
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="twelve columns">
+				<h2>Welcome to Foundation</h2>
+				<p>This is version 2.1 released on November 18, 2011</p>
+		
+				<hr />
 			</div>
 		</div>
-		<div id="content">
-			<p>this is the <em>software</em> page</p>
+		
+		<div class="row">
+			<div class="ten columns">
+				<h3>The Grid</h3>
+				
+				<!-- Grid Example -->
+				<div class="row">
+					<div class="ten columns">
+						<div class="panel">
+							<p>this is the <em>software</em> page</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="two columns">				
+				<ul>
+					<li>
+					  <a class="current1" href="/index.html">Home</a>
+					</li>
+					<li>
+					  <a class="link2" href="/about.html">About</a>
+					</li>
+					<li>
+					  <a class="link3" href="/articles.html">Articles</a>
+					</li>
+					<li>
+					  <a class="link4" href="/software.html">Software</a>
+					</li>
+				</ul>
+			</div>
 		</div>
+		
 	</div>
+	<!-- container -->
+	
+	
+
+
+	<!-- Included JS Files -->
+	<!-- Combine and Compress These JS Files -->
+	<script src="foundation/javascripts/jquery.min.js"></script>
+	<script src="foundation/javascripts/jquery.reveal.js"></script>
+	<script src="foundation/javascripts/jquery.orbit-1.3.0.js"></script>
+	<script src="foundation/javascripts/forms.jquery.js"></script>
+	<script src="foundation/javascripts/jquery.customforms.js"></script>
+	<script src="foundation/javascripts/jquery.placeholder.min.js"></script>
+	<!-- End Combine and Compress These JS Files -->
+	<script src="foundation/javascripts/app.js"></script>
+	
 </body>
 </html>
