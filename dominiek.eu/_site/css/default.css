@@ -9,13 +9,8 @@ html
 	background-repeat: repeat;
 }
 
-#sidebar
+.menu
 {
-	position: absolute;
-	left: 120px;
-	top: 100px;
-	width: 160px;
-	border-right: 1px solid #E0E0E0;
 }
 
 .title
@@ -23,7 +18,7 @@ html
 	margin-top: 150px;
 }
 
-.l1
+.menu l1
 {
 	background: #FF1921;
 	text-transform:uppercase;
@@ -33,7 +28,7 @@ html
 	padding:2px;
 }
 
-.l2
+.menu l2
 {
 	background: #19BAFF;
 	text-transform:uppercase;
@@ -43,7 +38,7 @@ html
 	padding:2px;
 }
 
-.l3
+.menu l3
 {
 	background: #47FF19;
 	text-transform:uppercase;
@@ -53,7 +48,7 @@ html
 	padding:2px;
 }
 
-.l4
+.menu l4
 {
 	background: #FF5E19;
 	text-transform:uppercase;
@@ -63,7 +58,7 @@ html
 	padding:2px;
 }
 
-#sidebar ul
+.menu ul
 {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
@@ -71,61 +66,61 @@ html
 	clear: left;
 }
 
-#sidebar ul li
+.menu ul li
 {
 	text-align: left;
 	font-size: 25px;
 	text-transform:uppercase;
-	margin-bottom: 7px;
+	margin: 15px;
 }
 
-#sidebar ul li a
+.menu ul li a
 {
 	text-decoration: none;
 	color: black;
 }
 
-#sidebar ul li a:hover
+.menu ul li a:hover
 {
 
 }
 
-#sidebar ul li a.link1:hover
-{
-	border-bottom: 3px solid #FF1921;
-}
-
-#sidebar ul li a.current1
+.menu ul li a.link1:hover
 {
 	border-bottom: 3px solid #FF1921;
 }
 
-#sidebar ul li a.link2:hover
+.menu ul li a.current1
+{
+	border-bottom: 3px solid #FF1921;
+}
+
+.menu ul li a.link2:hover
 {
 	border-bottom: 3px solid #19BAFF;
 }
 
-#sidebar ul li a.current2
+.menu ul li a.current2
 {
 	border-bottom: 3px solid #19BAFF;
 }
 
-#sidebar ul li a.link3:hover
+.menu ul li a.link3:hover
 {
 	border-bottom: 3px solid #FF5E19;
 }
 
-#sidebar ul li a.current3
+.menu ul li a.current3
 {
 	border-bottom: 3px solid #FF5E19;
 }
 
-#sidebar ul li a.link4:hover
+.menu ul li a.link4:hover
 {
 	border-bottom: 3px solid #47FF19;
 }
 
-#sidebar ul li a.current4
+.menu ul li a.current4
 {
 	border-bottom: 3px solid #47FF19;
 }
