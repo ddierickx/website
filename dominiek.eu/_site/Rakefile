@@ -1,0 +1,11 @@
+require 'jammit'
+Jammit.package!
+
+namespace :site do
+	desc "minifies css and js and outputs to min folder"
+		task :minify do
+			puts "minifying css and js."
+			system("jammit -o min -c _min.yml")
+			puts "minifying done."
+		end
+end
