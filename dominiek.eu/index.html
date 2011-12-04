@@ -2,15 +2,34 @@
 layout: default
 title: Dominique Dierickx
 ---
-
+<div class="row">
+	<div class="nine columns">
+        <p>Hi there!</p>
+		<p>Thanks for stopping by. This website is all about me, that's awesome!</p>
+        <p>
+    		Along with my portfolio and resume, you can find some articles here on technologies I find interesting.
+    	</p>
+    	<p>
+    		Enjoy your stay here and feel free to contact me.
+    	</p>
+    </div>
+    <div class="three columns">
+	    <img id="imgMe" title="Yup, this is me!" />
+    </div>
+</div>
+<hr />
 <p>
-Some random introduction text will be inserted here, with some basic idea on what is on this site and why its here.
+	Here are some recent articles I wrote:
 </p>
-<p>
-Here are some recent articles I wrote:
-</p>
+		
 <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	<div class="alert-box">
+		<span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+	</div>
     {% endfor %}
 </ul>
+<script>
+	var r = Math.floor(Math.random() * 5);
+	document.getElementById("imgMe").src = "img/me/" + r + ".png";
+</script>

@@ -26,20 +26,18 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<!--	<link rel="stylesheet" href="css/style.css"> -->
+    
 </head>
 <body>
 
 	<!-- container -->
 	<div class="container">
-		<div class="row">
-		
-		</div>
 		<div class="row header">
 			<div class="twelve columns">
-				<h2>Welcome to Foundation</h2>
-				<p>This is version 2.1 released on November 18, 2011</p>
+            	<div id="header">  
+                    <div id="canvas">
+                    </div>
+                </div>
 			</div>
 		</div>
 		
@@ -50,19 +48,41 @@
 					<div class="twelve columns">
 						<div class="panel">
 							<h3>&raquo; Dominique Dierickx</h3>
-							<p>
-Some random introduction text will be inserted here, with some basic idea on what is on this site and why its here.
-</p>
+							<div class="row">
+	<div class="nine columns">
+        <p>Hi there!</p>
+		<p>Thanks for stopping by. This website is all about me, that's awesome!</p>
+        <p>
+    		Along with my portfolio and resume, you can find some articles here on technologies I find interesting.
+    	</p>
+    	<p>
+    		Enjoy your stay here and feel free to contact me.
+    	</p>
+    </div>
+    <div class="three columns">
+	    <img id="imgMe" title="Yup, this is me!" />
+    </div>
+</div>
+<hr />
 <p>
-Here are some recent articles I wrote:
+	Here are some recent articles I wrote:
 </p>
+		
 <ul class="posts">
     
-      <li><span>11 Oct 2011</span> &raquo; <a href="/software/2011/10/11/when-colruyt-meets-foursquare.html">When Colruyt meets Foursquare</a></li>
+	<div class="alert-box">
+		<span>11 Oct 2011</span> - <a href="/software/2011/10/11/when-colruyt-meets-foursquare.html">When Colruyt meets Foursquare</a>
+	</div>
     
-      <li><span>10 Oct 2011</span> &raquo; <a href="/arduino/2011/10/10/arduino-impressions.html">Arduino, ideas and impressions</a></li>
+	<div class="alert-box">
+		<span>10 Oct 2011</span> - <a href="/arduino/2011/10/10/arduino-impressions.html">Arduino, ideas and impressions</a>
+	</div>
     
 </ul>
+<script>
+	var r = Math.floor(Math.random() * 5);
+	document.getElementById("imgMe").src = "img/me/" + r + ".png";
+</script>
 						</div>
 					</div>
 				</div>
@@ -110,7 +130,11 @@ Here are some recent articles I wrote:
 				</div>
 			</div>
 		</div>
-		
+		<div class="row">
+			<div class="twelve columns footer">
+				&copy; 2012 Dominique Dierickx
+			</div>
+		</div>
 	</div>
 	<!-- container -->
 	
@@ -119,5 +143,14 @@ Here are some recent articles I wrote:
 
 	<!-- Included JS Files -->
 	<script src="min/min.js"></script>
+	<script src="scripts/raphael-min.js"></script>
+	<script src="scripts/header.js"></script>
+    
+    <script>
+		$(document).ready(function()
+		{
+			initHeader($("#canvas")[0]);
+		});
+	</script>
 </body>
 </html>

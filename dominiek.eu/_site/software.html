@@ -26,20 +26,18 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<!--	<link rel="stylesheet" href="css/style.css"> -->
+    
 </head>
 <body>
 
 	<!-- container -->
 	<div class="container">
-		<div class="row">
-		
-		</div>
 		<div class="row header">
 			<div class="twelve columns">
-				<h2>Welcome to Foundation</h2>
-				<p>This is version 2.1 released on November 18, 2011</p>
+            	<div id="header">  
+                    <div id="canvas">
+                    </div>
+                </div>
 			</div>
 		</div>
 		
@@ -98,7 +96,11 @@
 				</div>
 			</div>
 		</div>
-		
+		<div class="row">
+			<div class="twelve columns footer">
+				&copy; 2012 Dominique Dierickx
+			</div>
+		</div>
 	</div>
 	<!-- container -->
 	
@@ -107,5 +109,14 @@
 
 	<!-- Included JS Files -->
 	<script src="min/min.js"></script>
+	<script src="scripts/raphael-min.js"></script>
+	<script src="scripts/header.js"></script>
+    
+    <script>
+		$(document).ready(function()
+		{
+			initHeader($("#canvas")[0]);
+		});
+	</script>
 </body>
 </html>
