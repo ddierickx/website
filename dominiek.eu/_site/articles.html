@@ -11,14 +11,14 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
 	
-	<title>Articles</title>
+	<title>dominiek &raquo; articles</title>
   
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="min/min.css">
+	<link rel="stylesheet" href="/min/min.css">
 	<!-- End Combine and Compress These CSS Files -->
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="min/min-ie.css">
+		<link rel="stylesheet" href="/min/min-ie.css">
 	<![endif]-->
 
 	
@@ -27,28 +27,81 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
     
+	<!-- Included JS Files -->
+	<script src="/min/min.js"></script>
 </head>
 <body>
 
 	<!-- container -->
 	<div class="container">
-		<div class="row header">
+        <div class="row spacer"></div>
+            
+		<div class="row">
 			<div class="twelve columns">
             	<div id="header">  
-                    <div id="canvas">
-                    </div>
+                	<a href="/index.html" alt="Home" title="Home">
+	    				<img src="/img/header.png" class="stretch" alt="" />
+                     </a>
                 </div>
 			</div>
 		</div>
 		
+        <div class="row spacer"></div>
+        
 		<div class="row">
 			<div class="ten columns">			
 				<!-- Grid Example -->
 				<div class="row">
 					<div class="twelve columns">
 						<div class="panel">
-							<h3>&raquo; Articles</h3>
-							<p>this is the <em>articles</em> page.</p>
+							<!-- <h3>articles</h3> -->
+							<h4>Articles</h4>
+<div class="spacer"></div>
+
+<div class="postentry">
+	<div class="header">
+		<a href="/2012/01/07/when-colruyt-meets-foursquare.html"><span class="title">Colruyt meets Foursquare</span></a>
+		<span class="date">07 Jan 2012</span>
+	</div>
+	
+	<table class="content">
+		<tr>
+			<td valign="top">
+				Experiment on extracting visit statistics to points-of-interests using the Foursquare API and some Python scripts. Find out the best time & day to visit your local supermarket or other POIs by analyzing crowdsourced data. Results of a three-week data monitoring experiment is presented here as well as the created tools used to gather it.
+				<p />
+				<p />
+				<a href="/2012/01/07/when-colruyt-meets-foursquare.html">Read the article</a>
+			</td>
+			<td valign="top" align="right"><a href="/2012/01/07/when-colruyt-meets-foursquare.html"><span class="title"><img class="thumbnail" src="/img/colruyt.png" /></a></td>
+		</tr>
+	</table>
+
+	<div class="footer">
+	</div>
+</div>
+
+<div class="postentry">
+	<div class="header">
+		<a href="/2012/01/06/the-making-of-dominiek-eu.html"><span class="title">The making of dominiek.eu</span></a>
+		<span class="date">06 Jan 2012</span>
+	</div>
+	
+	<table class="content">
+		<tr>
+			<td valign="top">
+				Some words on how this website was created using third party tools such as Jekyll and Foundation.
+				<p />
+				<p />
+				<a href="/2012/01/06/the-making-of-dominiek-eu.html">Read the article</a>
+			</td>
+			<td valign="top" align="right"><a href="/2012/01/06/the-making-of-dominiek-eu.html"><span class="title"><img class="thumbnail" src="/img/makingof/jekyll.png" /></a></td>
+		</tr>
+	</table>
+
+	<div class="footer">
+	</div>
+</div>
+
 						</div>
 					</div>
 				</div>
@@ -93,29 +146,28 @@
 						    </li>
 						
 					</ul>
+                    
+                    <div class="books">
+                     <div class="title">&raquo; Reading (<a href="books.html">see all</a>)</div>
+                <iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=dominiekeu-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=0596806752" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=dominiekeu-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=0465067107" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+				<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=dominiekeu-20&o=1&p=8&l=as1&m=amazon&f=ifr&ref=tf_til&asins=1934356581" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+				</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="twelve columns footer">
-				&copy; 2012 Dominique Dierickx
+				&copy; 2012 Dominique Dierickx | Made using <a href="http://github.com/mojombo/jekyll" target="_blank">Jekyll</a>, <a href="http://github.com/zurb/foundation" target="_blank">Foundation</a>
 			</div>
 		</div>
 	</div>
 	<!-- container -->
 	
-	
-
-
-	<!-- Included JS Files -->
-	<script src="min/min.js"></script>
-	<script src="scripts/raphael-min.js"></script>
-	<script src="scripts/header.js"></script>
-    
-    <script>
-		$(document).ready(function()
-		{
-			initHeader($("#canvas")[0]);
+	<script type="text/javascript">
+		$(function() {
+			$("a[class='lbpopup']").lightBox(); // Select all links in the page
 		});
 	</script>
 </body>

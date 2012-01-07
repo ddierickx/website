@@ -11,14 +11,14 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
 	
-	<title>Dominique Dierickx</title>
+	<title>dominiek &raquo; home</title>
   
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="min/min.css">
+	<link rel="stylesheet" href="/min/min.css">
 	<!-- End Combine and Compress These CSS Files -->
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="min/min-ie.css">
+		<link rel="stylesheet" href="/min/min-ie.css">
 	<![endif]-->
 
 	
@@ -27,62 +27,95 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
     
+	<!-- Included JS Files -->
+	<script src="/min/min.js"></script>
 </head>
 <body>
 
 	<!-- container -->
 	<div class="container">
-		<div class="row header">
+        <div class="row spacer"></div>
+            
+		<div class="row">
 			<div class="twelve columns">
             	<div id="header">  
-                    <div id="canvas">
-                    </div>
+                	<a href="/index.html" alt="Home" title="Home">
+	    				<img src="/img/header.png" class="stretch" alt="" />
+                     </a>
                 </div>
 			</div>
 		</div>
 		
+        <div class="row spacer"></div>
+        
 		<div class="row">
 			<div class="ten columns">			
 				<!-- Grid Example -->
 				<div class="row">
 					<div class="twelve columns">
 						<div class="panel">
-							<h3>&raquo; Dominique Dierickx</h3>
+							<!-- <h3>home</h3> -->
 							<div class="row">
-	<div class="nine columns">
-        <p>Hi there!</p>
-		<p>Thanks for stopping by. This website is all about me, that's awesome!</p>
-        <p>
-    		Along with my portfolio and resume, you can find some articles here on technologies I find interesting.
-    	</p>
-    	<p>
-    		Enjoy your stay here and feel free to contact me.
-    	</p>
-    </div>
-    <div class="three columns">
-	    <img id="imgMe" title="Yup, this is me!" />
-    </div>
+    	<div class="noteblock">
+                    <h4>Hi there!</h4>
+                    <p />
+                    <p>Thanks for stopping by. This website is all about me and the geeky stuff I create!</p>
+                    <p>Along with my <a href="about.html">resume</a> and <a href="software.html">portfolio</a>, you can find some  <a href="articles.html">articles</a> here on technologies I find interesting and on the stuff I've built and experimented with.</p>
+                    <p>Enjoy your stay here and feel free to <a href="about.html">contact me</a>.</p>
+					<p>Dominique Dierickx</p>
+        </div>
 </div>
+<div class="spacer"></div>
 <hr />
-<p>
-	Here are some recent articles I wrote:
-</p>
-		
-<ul class="posts">
-    
-	<div class="alert-box">
-		<span>11 Oct 2011</span> - <a href="/software/2011/10/11/when-colruyt-meets-foursquare.html">When Colruyt meets Foursquare</a>
+<h4>Recent articles</h4>
+<div class="spacer"></div>
+
+<div class="postentry">
+	<div class="header">
+		<a href="/2012/01/07/when-colruyt-meets-foursquare.html"><span class="title">Colruyt meets Foursquare</span></a>
+		<span class="date">07 Jan 2012</span>
 	</div>
-    
-	<div class="alert-box">
-		<span>10 Oct 2011</span> - <a href="/arduino/2011/10/10/arduino-impressions.html">Arduino, ideas and impressions</a>
+	
+	<table class="content">
+		<tr>
+			<td valign="top">
+				Experiment on extracting visit statistics to points-of-interests using the Foursquare API and some Python scripts. Find out the best time & day to visit your local supermarket or other POIs by analyzing crowdsourced data. Results of a three-week data monitoring experiment is presented here as well as the created tools used to gather it.
+				<p />
+				<p />
+				<a href="/2012/01/07/when-colruyt-meets-foursquare.html">Read the article</a>
+			</td>
+			<td valign="top" align="right"><a href="/2012/01/07/when-colruyt-meets-foursquare.html"><span class="title"><img class="thumbnail" src="/img/colruyt.png" /></a></td>
+		</tr>
+	</table>
+
+	<div class="footer">
 	</div>
-    
-</ul>
-<script>
-	var r = Math.floor(Math.random() * 5);
-	document.getElementById("imgMe").src = "img/me/" + r + ".png";
-</script>
+</div>
+
+<div class="postentry">
+	<div class="header">
+		<a href="/2012/01/06/the-making-of-dominiek-eu.html"><span class="title">The making of dominiek.eu</span></a>
+		<span class="date">06 Jan 2012</span>
+	</div>
+	
+	<table class="content">
+		<tr>
+			<td valign="top">
+				Some words on how this website was created using third party tools such as Jekyll and Foundation.
+				<p />
+				<p />
+				<a href="/2012/01/06/the-making-of-dominiek-eu.html">Read the article</a>
+			</td>
+			<td valign="top" align="right"><a href="/2012/01/06/the-making-of-dominiek-eu.html"><span class="title"><img class="thumbnail" src="/img/makingof/jekyll.png" /></a></td>
+		</tr>
+	</table>
+
+	<div class="footer">
+	</div>
+</div>
+
+
+<div style="clear: left"></div>
 						</div>
 					</div>
 				</div>
@@ -127,29 +160,28 @@
 						    </li>
 						
 					</ul>
+                    
+                    <div class="books">
+                     <div class="title">&raquo; Reading (<a href="books.html">see all</a>)</div>
+                <iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=dominiekeu-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=0596806752" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=dominiekeu-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=0465067107" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+				<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=dominiekeu-20&o=1&p=8&l=as1&m=amazon&f=ifr&ref=tf_til&asins=1934356581" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+				</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="twelve columns footer">
-				&copy; 2012 Dominique Dierickx
+				&copy; 2012 Dominique Dierickx | Made using <a href="http://github.com/mojombo/jekyll" target="_blank">Jekyll</a>, <a href="http://github.com/zurb/foundation" target="_blank">Foundation</a>
 			</div>
 		</div>
 	</div>
 	<!-- container -->
 	
-	
-
-
-	<!-- Included JS Files -->
-	<script src="min/min.js"></script>
-	<script src="scripts/raphael-min.js"></script>
-	<script src="scripts/header.js"></script>
-    
-    <script>
-		$(document).ready(function()
-		{
-			initHeader($("#canvas")[0]);
+	<script type="text/javascript">
+		$(function() {
+			$("a[class='lbpopup']").lightBox(); // Select all links in the page
 		});
 	</script>
 </body>
