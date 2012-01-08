@@ -1,0 +1,14 @@
+{
+    "books": [
+        {
+            "author": "",
+            "rating": 4,
+            "title": "Javascript Patterns"
+        },
+        {
+            "author": "",
+            "rating": 3,
+            "title": "My job went to India."
+        }
+    ]
+}

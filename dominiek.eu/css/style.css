@@ -25,6 +25,16 @@ body
 	margin-left: 20px;
 }
 
+.books .booklist
+{
+	margin-left: 7px;
+}
+
+.books .booklist a
+{
+	margin-top: 7px;
+}
+
 .panel ul  li
 {
 	list-style-image: url('/img/bullet.png');
