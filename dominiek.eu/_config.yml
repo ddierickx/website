@@ -13,7 +13,7 @@ lsi:         false
 pygments:    false
 markdown:    maruku
 permalink:   date
-exclude: Rakefile
+exclude: Rakefile, README.md
 #see: http://stackoverflow.com/questions/6366188/jekyll-select-current-page-url-and-change-its-class
 
 navigation:

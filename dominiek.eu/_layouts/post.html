@@ -2,11 +2,19 @@
 layout: default
 ---
 <div class="post">
-  <img src="{{ page.thumbnail }}" width="50" height="50" />
-  <h2><a href="{{ page.url }}">
-    {{ page.title }}
-  </a></h2>
-  <div id="date">published {{ page.date | date_to_string }}</div>
-  {{ content }}
+  <h4><a href="{{ page.url }}">
+    &raquo; {{ page.title }}
+  </a></h4>
+  <div class="spacer"></div>
+  <div class="summary">
+  {{ page.summary }}
+  </div>
+  
+  <div class="content">
+	{{ content }}
+  </div>
+  <p>
+  </p>
+  <span class="published">Published on {{ page.date | date_to_string }}</span>
   <hr />
 </div>

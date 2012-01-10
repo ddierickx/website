@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dominiek.eu</title>
+    <link>http://www.dominiek.eu</link>
+    <atom:link href="http://www.dominiek.eu/rss.xml" rel="self" type="application/rss+xml" />
+    <description>stuff from coyled</description>
+    <language>en-us</language>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://www.dominiek.eu{{ post.url }}</link>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <author>d.dierickx@gmail.com (Dominique Dierickx)</author>
+      <guid>http://www.dominiek.eu/{{ post.id }}</guid>
+      <description>{{ post.summary | xml_escape }}</description>
+    </item>
+    {% endfor %}
+
+  </channel> 
+</rss>

@@ -1,35 +1,43 @@
 ---
 layout: default
-title: Dominique Dierickx
+title: home
 ---
 <div class="row">
-	<div class="nine columns">
-        <p>Hi there!</p>
-		<p>Thanks for stopping by. This website is all about me, that's awesome!</p>
-        <p>
-    		Along with my portfolio and resume, you can find some articles here on technologies I find interesting.
-    	</p>
-    	<p>
-    		Enjoy your stay here and feel free to contact me.
-    	</p>
-    </div>
-    <div class="three columns">
-	    <img id="imgMe" title="Yup, this is me!" />
-    </div>
+    	<div class="noteblock">
+                    <h4>Hi there!</h4>
+                    <p />
+                    <p>Thanks for stopping by. This website is all about me and the geeky stuff I create!</p>
+                    <p>Along with my <a href="about.html">resume</a> and <a href="software.html">portfolio</a>, you can find some  <a href="articles.html">articles</a> here on technologies I find interesting and on the stuff I've built and experimented with.</p>
+                    <p>Enjoy your stay here and feel free to <a href="about.html">contact me</a>.</p>
+					<p>Dominique Dierickx</p>
+        </div>
 </div>
+<div class="spacer"></div>
 <hr />
-<p>
-	Here are some recent articles I wrote:
-</p>
-		
-<ul class="posts">
-    {% for post in site.posts %}
-	<div class="alert-box">
-		<span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+<h4>Recent articles</h4>
+<div class="spacer"></div>
+{% for post in site.posts %}
+<div class="postentry">
+	<div class="header">
+		<a href="{{ post.url }}"><span class="title">{{ post.title }}</span></a>
+		<span class="date">{{ post.date | date_to_string }}</span>
 	</div>
-    {% endfor %}
-</ul>
-<script>
-	var r = Math.floor(Math.random() * 5);
-	document.getElementById("imgMe").src = "img/me/" + r + ".png";
-</script>
+	
+	<table class="content">
+		<tr>
+			<td valign="top">
+				{{ post.summary }}
+				<p />
+				<p />
+				<a href="{{ post.url }}">Read the article</a>
+			</td>
+			<td valign="top" align="right"><a href="{{ post.url }}"><span class="title"><img class="thumbnail" src="{{ post.thumbnail }}" /></a></td>
+		</tr>
+	</table>
+
+	<div class="footer">
+	</div>
+</div>
+{% endfor %}
+
+<div style="clear: left"></div>
