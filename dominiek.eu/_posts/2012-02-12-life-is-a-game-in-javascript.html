@@ -1,0 +1,31 @@
+---
+layout: post
+title: Life is a game in JavaScript!
+summary: An implementation of Conway's Game of Life in JavaScript using the HTML5 Canvas.
+thumbnail: /img/jslife/jslife.png
+tags: jslife, javascript, html5, canvas
+---
+<div>
+<canvas id="canvas" width="400" height="175">
+</canvas>
+</div>
+<script type="text/javascript">
+	var jslifeUrl = "http://www.dominiek.eu/scripts/jslife-min.js";
+	
+	$.getScript(jslifeUrl,
+		function() {
+			var gosperGliderGun = [ "2_5", "3_5", "2_6", "3_6", "12_5", "12_6", "12_7", "13_4", "13_8", "14_3", "14_9", "15_3", "15_9",
+				"16_6", "17_4", "17_8", "18_7", "18_5", "18_6", "19_6", "22_5", "23_5", "22_4", "23_4", "22_3", "23_3", "24_2", "24_6", "26_1", "26_2", "26_6", "26_7", "36_3", "37_3", "36_4", "37_4"];
+
+			var conf = new JSLIFE.configuration.Configuration()
+					.withHorizontalBlocks(50)
+					.withUpdateSpeed(40)	
+					.withBackgroundStrokeColor("#CCFFFF")
+					.withForegroundStrokeColor("#CCFFFF")
+					.withForegroundColor("#47FF19")
+					.withBackgroundColor("#19BAFF")
+					.withInitialState(gosperGliderGun);
+
+			new JSLIFE.core.JSLife(conf.withTargetDivId("canvas"));	
+		});
+</script>
