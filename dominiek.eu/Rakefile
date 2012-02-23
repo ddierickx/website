@@ -10,4 +10,8 @@ namespace :site do
 		task :preview do
 			system("jekyll --server --auto")
 		end
+		task :preview do
+			puts "Starting Jekyll server with auto-reloading"
+			system("jekyll --server --auto")
+		end
 end
