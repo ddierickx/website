@@ -38,8 +38,7 @@ I created two tools to get the statistics:
 
 The __fsquerystats__ script was run with the following arguments:
 
-<script type="text/javascript" src="http://snipt.net/embed/c3e5c7dd78716ec5ed888b1e399362a1">
-</script>
+<script src="https://gist.github.com/1902530.js"> </script>
 
 <p />
 The script ran for __3 weeks__ and polled the search results for the term "Colruyt" in a large part of Belgium, storing the number of checkins to a file.

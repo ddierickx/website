@@ -5,10 +5,32 @@ summary: An implementation of Conway's Game of Life in JavaScript using the HTML
 thumbnail: /img/jslife/jslife.png
 tags: jslife, javascript, html5, canvas
 ---
-<div>
-<canvas id="canvas" width="400" height="175">
+<h3>Introduction</h3>
+Not all people appreciate JavaScript, but once you know <a href="http://matt.might.net/articles/javascript-warts/">where the bad spots are</a>, you make your way around them and get to the sweet parts. I recently read Stoyan Stefanov's book JavaScript Patterns and that boosted me to dive into it again. The book is just about 200 pages but it really gives a detailed view on the more advanced JavaScript patterns, techniques and best practices that are used in some of the largest opensource JavaScript projects. What I liked most about the book is that it didn't try to do a mapping of the GoF patterns to JavaScript. The author shows the full potential of JavaScript and discusses concepts that are more powerful then what is available in your favorite OO language, like partial function application and mixins.
+<p />
+
+<h3>It's Life, Jim, but not was we know it.</h3>
+That said, I wanted to try some things out in JavaScript, so what could be better than yet another Conway's Game of Life implementation?
+
+The Game of Life is a zero-player game. There is a grid with an initial configuration and a cell in the grid will come to life or die, depending on the state of its neighbours. These rules are checked over and over until the game comes at a halting state or until all cells have died. The rules on what cell lives and dies are simple:
+
+<ul>
+<li>A living cell with less than two living neigbours dies.</li>
+<li>A living cell with two or three neighbours lives on.</li>
+<li>A living cell  with more than three neighbours dies.</li>
+<li>A dead cell with exactly three neighbours comes to life.</li>
+</ul>
+
+<p />
+<h3>A demo</h3>
+
+Here is the Game of Life, with an initial, oscillating, configuration called the Gosper Gliding Gun.
+<p />
+<div style="text-align: center">
+<canvas id="canvas" width="600" height="400">
 </canvas>
 </div>
+
 <script type="text/javascript">
 	var jslifeUrl = "http://www.dominiek.eu/scripts/jslife-min.js";
 	
@@ -29,3 +51,24 @@ tags: jslife, javascript, html5, canvas
 			new JSLIFE.core.JSLife(conf.withTargetDivId("canvas"));	
 		});
 </script>
+<p />
+<h3>The implementation</h3>
+To draw the grid in JavaScript, I came up with three options. As this is just a simple grid, the game could be drawn on a simple HTML table with appropriate CSS styling. This is certainly a good option but because I don't like tables, I didn't go for this option. Then I stumbled upon a very cool project called RaphaelJS. This library helps out in drawing SVG graphics and you can definitely created some nice stuff with it like charts, vector map viewers and even animated movies. I had implemented the whole thing using Raphael but found it to be a bit too slow in the end. The final option then was to use the new-ish HTML5 canvas element, a standard which finally seems to have made it to all major browsers. I found this was the way to got, so I got started.
+
+I wanted to make the implementation easy to use, so settings the whole thing up should be pretty simple. I came up with a configuration object and a fluent builder implementation for it, so you configure the Game of Life rendering like this:
+
+<script src="https://gist.github.com/1902569.js"> </script>
+
+<p />
+<h3>Minor optimizations</h3>
+
+The algorithm itself implements a few quick win optimizations but nothing as drastic as done in hashlife. A first optimization was that the neighbour of each cell is computed once at initialization, this allows us to skip grid boundary checks each time to find a cells' neighbours. A second optimization was to keep a change list. This list contains the cells that could change state in the next generation of the algorithm. The list contains cells that were born or died and their respective neighbours. A pretty big speedup was obtained this way because only cells in this list need to be checked and rendered. Another optimization was using sets to check which cell was already in the change list. To use a set JavaScript structure, the general idea seems to be to <a href="http://www.javascriptexamples.org/2011/01/17/how-to-implement-a-set-in-javascript/">abuse the default Object</a>, an idea I don't find appealing but I kinda had to roll with it... A final speedup could be obtained by feeding the JavaScript files to a JavaScript optimizer and minifier. A few of those are available; I choose Google's Closure.
+
+<p />
+<h3>The hard parts</h3>
+
+Weirdly enough, the hardest part was enabling user interaction with the grid. The user can interact with the grid by moving the mouse. Any cells under the mouse pointer will come to life. The difficulty here was catching this event in a browser-independent way and I had to resort to jQuery for this. This is the only part of the library that uses an external library.
+
+<p />
+<h3>Use it yourself?</h3>
+As always you can find the code on my github page.
