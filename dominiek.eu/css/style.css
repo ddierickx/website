@@ -6,6 +6,10 @@ body
 	font-size: 12px;
 }
 
+#disqus_thread li, #disqus_thread span {
+  list-style-image: none !important;
+}
+
 .menu
 {
 

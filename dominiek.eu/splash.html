@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>dominiek &raquo; splash</title>
+  
+	<!-- Included CSS Files -->
+
+	<!-- End Combine and Compress These CSS Files -->
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/min/min-ie.css">
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+	<!-- Included JS Files -->
+	<script src="https://raw.github.com/ddierickx/jslife/master/jslife/scripts/jslife-min.js"></script>
+		
+	<!-- Big brother is watching you (and so am I)! -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-28191659-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+    
+    <style>
+	body {
+		margin: 0px;
+	}
+	
+	#horizon {
+		text-align: center;
+		position: absolute;
+		top: 10%;
+		left: 0px;
+		width: 100%;
+		height: 1px;
+		overflow: visible;
+		visibility: visible;
+		display: block;
+	}
+	
+	#canvas {
+		margin-left: -125px;
+		position: absolute;
+		left: 50%;
+		width: 450px;
+		height: 400px;
+		visibility: visible;
+	}
+	</style>
+</head>
+<body style="background: #19BAFF;">
+	<div id="horizon">
+			<div id="canvas">
+            </div>
+	</div>
+	<!-- container -->
+	
+	<script type="text/javascript">
+		var conf = new JSLIFE.configuration.Configuration()
+						.withTargetDivId("canvas")
+						.withUpdateSpeed(100)
+						.withHorizontalBlocks(25)
+						.withBackgroundStrokeColor("#CCFFFF")
+						.withForegroundStrokeColor("#CCFFFF")
+						.withForegroundColor("#47FF19")
+						.withBackgroundColor("#19BAFF");
+		var gol = new JSLIFE.core.JSLife(conf);
+	</script>
+</body>
+</html>
