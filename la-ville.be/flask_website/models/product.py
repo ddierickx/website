@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Numeric
+from flask_website.utils import sqlite
 from flask_website.data.database import Base
 
 class Product(Base):
@@ -6,7 +7,7 @@ class Product(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
     image_url = Column(String(120))
-    price = Column(Numeric())
+    price = Column(sqlite.SqliteNumeric())
 
     def __init__(self, name=None, image_url=None, price=0):
         self.name = name

@@ -34,21 +34,26 @@ def init_flask():
 	    return render_template('404.html'), 404
 
 	# Initialize blueprints.
-	from flask_website.views import general
+	from flask_website.views import general, store, store_api
 	app.register_blueprint(general.mod)
+	app.register_blueprint(store.mod)
+	app.register_blueprint(store_api.mod)
 
-
-	# Small DB test => REMOVE
 	db = database.Database()
 	db.init_db(app)
+
+	#init_test_db(db)
+	
+	return app
+
+def init_test_db(db):
+	# Small DB test => REMOVE
 
 	prod1 = product.Product("Hanger model", "content/product_images/hanger model.jpg", 39.99)
 	prod2 = product.Product("Hanger model", "content/product_images/kraagje collar dondergroen.jpg", 49.99)
 	prod3 = product.Product("Hanger model", "content/product_images/kraag collar 1deel oranje.jpg", 39.99)
 	prod4 =	product.Product("Hanger model", "content/product_images/kraag collar 1deel bordeaux.jpg", 29.99)
 
-	#db.session.add(prod1)
-	#db.session.add_all([prod1, prod2, prod3, prod4])
-	#db.session.commit()
-
-	return app
+	db.session.add(prod1)
+	db.session.add_all([prod1, prod2, prod3, prod4])
+	db.session.commit()

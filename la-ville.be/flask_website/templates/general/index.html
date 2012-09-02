@@ -2,20 +2,8 @@
 {% block content %}
 <div class="row">
     <div class="twelve columns">
-      <div id="featured">
-	{% for product in products %}
-		<img src="{{ url_for('static', filename=product.image_url) }}" />
-	{% endfor %}
-      </div>
+    	This is the start page.  		
     </div>
 </div>
 
-{% endblock %}
-
-{% block script %}
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#featured").orbit();
-	});
-</script>
 {% endblock %}

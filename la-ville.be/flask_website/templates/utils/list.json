@@ -1,0 +1,6 @@
+{
+	"page": {{ page }},
+	"page_size": {{ page_size }},
+	"size": {{ size }},
+	"records": {{ records_json }}
+}
