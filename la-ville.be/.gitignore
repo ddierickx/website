@@ -1,2 +1,4 @@
 *.pyc
 venv
+logs/*
+flask_website/static/content/*

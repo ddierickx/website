@@ -1,5 +1,9 @@
 /* Artfully masterminded by ZURB  */
 
+body {
+	background: url('../images/bg.png');
+}
+
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
