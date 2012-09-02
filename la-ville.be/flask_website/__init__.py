@@ -43,17 +43,21 @@ def init_flask():
 	db.init_db(app)
 
 	#init_test_db(db)
+
+	# Utility functions for Jinja2.
+	app.jinja_env.globals.update(jsonBoolean=lambda b: str(b).lower())
 	
 	return app
 
 def init_test_db(db):
 	# Small DB test => REMOVE
+	prod1 = product.Product(name="Hanger model",
+				short_description="Short description",
+				image_url="content/product_images/hanger model.jpg",
+				price=39.99,
+				stock=10,
+				color="red",
+				discontinued=False)
 
-	prod1 = product.Product("Hanger model", "content/product_images/hanger model.jpg", 39.99)
-	prod2 = product.Product("Hanger model", "content/product_images/kraagje collar dondergroen.jpg", 49.99)
-	prod3 = product.Product("Hanger model", "content/product_images/kraag collar 1deel oranje.jpg", 39.99)
-	prod4 =	product.Product("Hanger model", "content/product_images/kraag collar 1deel bordeaux.jpg", 29.99)
-
-	db.session.add(prod1)
-	db.session.add_all([prod1, prod2, prod3, prod4])
+	db.session.add_all([prod1])
 	db.session.commit()

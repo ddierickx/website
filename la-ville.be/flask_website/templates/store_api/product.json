@@ -1,5 +1,9 @@
 {
 	"name":"{{ product.name }}",
+	"short_description":"{{ product.short_description }}",
 	"image_url":"{{ url_for('static', filename=product.image_url) }}",
-	"price":{{ product.price }}
+	"price":{{ product.price }},
+	"stock":{{ product.stock }},
+	"color":"{{ product.color }}",
+	"discontinued":{{ jsonBoolean(product.discontinued) }}
 }
