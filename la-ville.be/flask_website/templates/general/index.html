@@ -3,13 +3,13 @@
 <div class="row">
     <div class="twelve columns">
       <div id="featured">
-        <img src="{{ url_for('static', filename='content/product_images/hanger model.jpg') }}" alt="slide image">
-        <img src="{{ url_for('static', filename='content/product_images/kraagje collar dondergroen.jpg') }}" alt="slide image">
-        <img src="{{ url_for('static', filename='content/product_images/kraag collar 1deel grijs.jpg') }}" alt="slide image">
-        <img src="{{ url_for('static', filename='content/product_images/kraag collar 1deel bordeaux.jpg') }}" alt="slide image">
+	{% for product in products %}
+		<img src="{{ url_for('static', filename=product.image_url) }}" />
+	{% endfor %}
       </div>
     </div>
 </div>
+
 {% endblock %}
 
 {% block script %}
