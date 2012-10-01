@@ -5,6 +5,9 @@
       <div id="featured">
 	{% for product in products %}
 		<img src="{{ url_for('static', filename=product.image_url) }}" />
+		{% for image in product.product_images %}
+			<img src="{{ image.image_url }}" />
+		{% endfor %}
 	{% endfor %}
       </div>
     </div>

@@ -17,5 +17,8 @@ class Database:
 	app.logger.debug("Initializing database.")
 	from flask_website.models import user
 	from flask_website.models import product
+	from flask_website.models import productimage
+	from flask_website.models import color
+	from flask_website.models import productgroup
 	Base.metadata.create_all(bind=self.engine)
 	app.logger.debug("Database initialized.")

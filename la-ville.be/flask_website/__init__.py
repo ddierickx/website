@@ -1,6 +1,8 @@
 from flask import Flask, session, g, render_template
 from flask_website.data import database
-from flask_website.models import user, product
+from flask_website.models import user, product, productimage, color, productgroup
+from flask.ext.admin import Admin
+from flask.ext.admin.contrib.sqlamodel import ModelView
 
 def init_cfg(app):
 	# Load from file first.
@@ -21,10 +23,18 @@ def init_logging(app):
 	file_handler.setLevel(logging.WARNING)
 	app.logger.addHandler(file_handler)
 
+def init_admin(app, db):
+	admin = Admin(app, name="La Ville")
+	admin.add_view(ModelView(product.Product, db.session))
+	admin.add_view(ModelView(color.Color, db.session))
+	admin.add_view(ModelView(productgroup.ProductGroup, db.session))
+
 
 def init_flask():
 	# Initialize app!
 	app = Flask(__name__)
+	# Needed for Flask-admin.
+	app.secret_key = "secret"
 	init_logging(app)
 	init_cfg(app)
 
@@ -42,6 +52,7 @@ def init_flask():
 	db = database.Database()
 	db.init_db(app)
 
+	init_admin(app, db)
 	#init_test_db(db)
 
 	# Utility functions for Jinja2.
@@ -58,6 +69,9 @@ def init_test_db(db):
 				stock=10,
 				color="red",
 				discontinued=False)
+	img1 = productimage.ProductImage("an_url")
 
-	db.session.add_all([prod1])
+	prod1.product_images.append(img1)
+
+	db.session.add_all([prod1, img1])
 	db.session.commit()

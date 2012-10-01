@@ -1,2 +1,5 @@
-#DATABASE="sqlite://"
-DATABASE="sqlite:////tmp/test.db"
+DATABASE="sqlite://"
+#DATABASE="sqlite:////tmp/test.db"
+NAME="La Ville"
+EMAIL="jolien.deville@hotmail.com"
+FOOTER="This is a footer."
