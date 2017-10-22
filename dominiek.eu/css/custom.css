@@ -1,0 +1,20 @@
+﻿html {
+	background-color: rgba(45, 0, 95, 0.78);
+}
+
+body {
+	color: white;
+}
+
+.social {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.header {
+	margin-top: 18rem;
+}

@@ -1,43 +1,62 @@
----
-layout: default
-title: home
----
-<div class="row">
-    	<div class="noteblock">
-                <h4>Hi there!</h4>
-                <p />
-                <p>Along with my <a href="about.html">resume</a> and <a href="software.html">portfolio</a>, you can find some  <a href="articles.html">articles</a> here on technologies I find interesting and on the stuff I've built and experimented with.</p>
-                <p>Thanks for stopping by. This website is all about me and the geeky stuff I create!</p>
-                <p>Enjoy your stay here and feel free to <a href="about.html">contact me</a>.</p>
-		<p>Dominique Dierickx</p>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dominique Dierickx</title>
+
+  <meta name="description" content="Personal webpage of Dominique Dierickx">
+  <meta name="author" content="Dominique Dierickx">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <div class="container u-full-width u-max-full-width">
+      <section class="header">
+        <h2 class="title">Dominique Dierickx</h2>
+      </section>
+      <div class="row">
+        <div class="twelve columns">
+        <h3>Hi there!</h3>
+        <p>
+        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het belangrijke punt van het gebruik van Lorem Ipsum is dat het uit een min of meer normale verdeling van letters bestaat, in tegenstelling tot "Hier uw tekst, hier uw tekst" wat het tot min of meer leesbaar nederlands maakt. Veel desktop publishing pakketten en web pagina editors gebruiken tegenwoordig Lorem Ipsum als hun standaard model tekst, en een zoekopdracht naar "lorem ipsum" ontsluit veel websites die nog in aanbouw zijn. Verscheidene versies hebben zich ontwikkeld in de loop van de jaren, soms per ongeluk soms expres (ingevoegde humor en dergelijke).
+        </p>
         </div>
-</div>
-<div class="spacer"></div>
-<hr />
-<h4>Recent articles</h4>
-<div class="spacer"></div>
-{% for post in site.posts %}
-<div class="postentry">
-	<div class="header">
-		<a href="{{ post.url }}"><span class="title">{{ post.title }}</span></a>
-		<span class="date">{{ post.date | date_to_string }}</span>
-	</div>
-	
-	<table class="content">
-		<tr>
-			<td valign="top">
-				{{ post.summary }}
-				<p />
-				<p />
-				<a href="{{ post.url }}">Read the article</a>
-			</td>
-			<td valign="top" align="right"><a href="{{ post.url }}"><span class="title"><img class="thumbnail" src="{{ post.thumbnail }}" /></a></td>
-		</tr>
-	</table>
-
-	<div class="footer">
-	</div>
-</div>
-{% endfor %}
-
-<div style="clear: left"></div>
+      </div>
+      <section>
+        <h3>My resume</h3>
+      </section>
+      <section>
+        <h3>Find me on</h3>
+        <div class="row">
+          <div class="six columns social">
+              <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+          </div>
+          <div class="six columns social">
+              <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns social">
+              <i class="fa fa-twitter fa-5x" aria-hidden="true"></i>
+          </div>
+          <div class="six columns social">
+              <i class="fa fa-foursquare fa-5x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns social">
+              <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
+          </div>
+          <div class="six columns social">
+              <i class="fa fa-linkedin fa-5x" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
