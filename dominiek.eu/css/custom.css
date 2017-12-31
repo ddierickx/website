@@ -6,15 +6,24 @@ body {
 	color: white;
 }
 
-.social {
-	text-align: center;
-	margin-top: 25px;
-}
 
 .container {
     max-width: 800px;
 }
 
 .header {
-	margin-top: 18rem;
+    margin-top: 12rem;
+}
+
+.social {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.social a {
+    color: white;
+}
+
+.social a:hover {
+    color: blue;
 }
